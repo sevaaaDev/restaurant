@@ -5,6 +5,7 @@ import displayMenu from "./menu";
 
 const start = () => {
   displayNav();
+  displayHome();
   // displayHome();
   const homeBtn = document.querySelector(".home");
   const menuBtn = document.querySelector('.menu')
