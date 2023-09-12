@@ -10,6 +10,9 @@ export default function displayNav() {
   li1.innerText = 'Home'
   li2.innerText = 'Menu'
   li3.innerText = 'Contact'
+  li1.classList.add('home')
+  li2.classList.add('menu')
+  li3.classList.add('contact')
   ul.append(li1, li2, li3)
   nav.append(ul)
   container.classList.add('container', 'nav')
