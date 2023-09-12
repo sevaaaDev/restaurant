@@ -1,0 +1,29 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+header {
+  background-color: black;
+  opacity: 0.9;
+  text-align: center;
+}
+
+header h1 {
+  color: white;
+  font-size: 3rem;
+  padding: 1rem 1rem 0.5rem;
+  /* margin: 0 0 1rem; */
+}
+
+header nav ul {
+  list-style-type: none;
+  color: white;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  font-size: 1.5rem;
+  padding: 1rem 0 0.5rem;
+}
