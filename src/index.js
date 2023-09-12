@@ -2,10 +2,10 @@ import displayNav from "./nav";
 import displayHome from "./home";
 import displayMenu from "./menu";
 
+displayNav();
+displayHome();
 
 const start = () => {
-  displayNav();
-  displayHome();
   // displayHome();
   const homeBtn = document.querySelector(".home");
   const menuBtn = document.querySelector('.menu')
