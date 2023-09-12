@@ -11,7 +11,7 @@
 }
 
 header {
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.9);
   text-align: center;
 }
 
@@ -63,4 +63,36 @@ main .home h1, main .home p {
 main .home h1 {
   font-size: 5rem;
   line-height: 1;
+}
+
+/* === Menu === */
+
+main .menu {
+  background-color: rgba(0, 0, 0, 0.9);
+  height: calc(100svh - 54.4px);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 0 5rem;
+}
+
+main .menu .product {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 1rem;
+  align-items: center;
+}
+
+.img-product {
+  grid-column: 1 / 2;
+  width: 200px;
+  border-radius: 50%;
+}
+
+.name-product {
+  color: white;
+  font-size: 2rem;
+}
+
+.price-product {
+  color: white;
 }
