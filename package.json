@@ -2,10 +2,10 @@
   "name": "restaurant-page",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "private":true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack",
+    "watch": "webpack --watch",
     "start": "webpack serve --open"
   },
   "keywords": [],
