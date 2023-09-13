@@ -43,7 +43,7 @@ header nav ul li:hover {
 }
 
 main {
-  height: calc(100svh - 54.4px);
+  height: calc(100svh - 55.2px);
 }
 
 .underline {
@@ -89,7 +89,7 @@ main .menu {
     hsl(22, 60%, 20%) 5px,
     hsl(22, 60%, 20%) 25px
   );
-  height: calc(100svh - 54.4px);
+  height: calc(95svh - 54.4px);
   border-radius: 1rem;
   overflow: auto;
   scrollbar-width: none;
@@ -110,14 +110,9 @@ main .menu .menu-list {
   display: flex;
   justify-content: start;
   align-items: center;
-  margin: 0rem 0;
   border-bottom: 1px dashed white;
 }
 
-main .menu .menu-list h2 {
-  color: white;
-  margin: 2rem 0 1rem;
-}
 .img-product {
   grid-column: 1 / 2;
   width: 100px;
