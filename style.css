@@ -55,7 +55,7 @@ main {
 main .home {
   display: flex;
   flex-direction: column;
-  height: calc(100svh - 54.4px);
+  height: calc(95svh - 54.4px);
   justify-content: center;
 }
 
@@ -139,7 +139,7 @@ main .contact {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   align-items: center;
-  height: calc(100svh - 54.4px);
+  height: calc(95svh - 54.4px);
 }
 
 main .contact img {
