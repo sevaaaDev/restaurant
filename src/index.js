@@ -2,12 +2,12 @@ import displayNav from "./nav";
 import displayHome from "./home";
 import displayMenu from "./menu";
 import displayContact from "./contact";
+import setUnderline from "./navTab";
 
 displayNav();
 displayHome();
 
-const start = () => {
-  // displayHome();
+const start = (currentTab) => {
   const homeBtn = document.querySelector(".home");
   const menuBtn = document.querySelector('.menu')
   const contactBtn = document.querySelector('.contact')
@@ -21,22 +21,32 @@ const start = () => {
     resetDisplay();
     displayNav();
     displayHome();
-    start();
+    start('home');
   });
   
   menuBtn.addEventListener('click', () => {
     resetDisplay();
     displayNav();
     displayMenu();
-    start();
+    start('menu');
   })
 
   contactBtn.addEventListener('click', () => {
     resetDisplay();
     displayNav();
     displayContact();
-    start();
+    start('contact');
   })
+
+  if (currentTab === 'home') {
+    setUnderline(homeBtn, homeBtn, menuBtn, contactBtn)
+  }
+  if (currentTab === 'menu') {
+    setUnderline(menuBtn, homeBtn, menuBtn, contactBtn)
+  }
+  if (currentTab === 'contact') {
+    setUnderline(contactBtn, homeBtn, menuBtn, contactBtn)
+  }
 }
 
-start()
+start('home')
