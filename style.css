@@ -31,7 +31,7 @@ header nav ul li {
 }
 
 header nav ul li:hover {
-  text-decoration: underline;
+  translate: 0 -.3rem;
 }
 
 .current-tab {
@@ -44,6 +44,10 @@ header nav ul li:hover {
 
 main {
   height: calc(100svh - 54.4px);
+}
+
+.underline {
+  border-bottom: 1px solid white;
 }
 
 /* === Home === */
