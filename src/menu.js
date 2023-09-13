@@ -1,39 +1,63 @@
 export default function displayMenu() {
-  const productName = [{
-    src: 'img/cappuccino.jpg',
-    name: 'Cappuccino',
-  }, {
-    src: 'img/latte.jpg',
-    name: 'Latte',
-  }, {
-    src: 'img/espresso.jpg',
-    name: 'Espresso',
-  }, {
-    src: 'img/americano.jpg',
-    name: 'Americano',
-  },]
+  const coffee = [
+    {
+      src: "img/cappuccino.jpg",
+      name: "Cappuccino",
+    },
+    {
+      src: "img/americano.jpg",
+      name: "Americano",
+    },
+    {
+      src: "img/espresso.jpg",
+      name: "Espresso",
+    },
+    {
+      src: "img/latte.jpg",
+      name: "Latte",
+    },
+  ];
+  const dessert = ["Donut", "Es Buah", "Pisang Coklat", "Cendol"]
   const content = document.getElementById('content')
   const main = document.createElement('main')
   const container = document.createElement('div')
-  for (let coffee of productName) {
+  const h1 = document.createElement('h1')
+  const h2 = document.createElement('h2')
+  const menuList = document.createElement('div')
+  for (let kopi of coffee ) {
     const product = document.createElement('div')
     const img = document.createElement('img')
-    img.setAttribute('src', coffee.src)
-    const infoProduct = document.createElement('div')
-    const nameProduct = document.createElement('div')
-    const priceProduct = document.createElement('div')
-    nameProduct.innerText = coffee.name
-    priceProduct.innerText = '$3.00'
-    img.classList.add('img-product')
+    const name = document.createElement('p')
+    const price = document.createElement('p')
+    price.innerText = '$3.00'
+    name.innerText = kopi.name
+    img.setAttribute('src', kopi.src)
     product.classList.add('product')
-    infoProduct.classList.add('info-product')
-    nameProduct.classList.add('name-product')
-    priceProduct.classList.add('price-product')
-    infoProduct.append(nameProduct, priceProduct)
-    product.append(img, infoProduct)
-    container.append(product)
+    img.classList.add('img-product')
+    name.classList.add('name-product')
+    price.classList.add('price-product')
+    product.append(img,name,price)
+    menuList.append(product)
   }
-  container.classList.add( 'menu')
+  h2.innerText = 'Dessert'
+  menuList.append(h2)
+  for (let desert of dessert) {
+    const product = document.createElement('div')
+    const name = document.createElement('p')
+    const price = document.createElement('p')
+    price.innerText = '$1.00'
+    name.innerText = desert
+    product.classList.add('product')
+    name.classList.add('name-product')
+    price.classList.add('price-product')
+    product.append(name,price)
+    menuList.append(product)
+  }
+  h1.innerText = 'Menu'
+  menuList.classList.add('menu-list')
+  container.classList.add('container', 'menu')
+  container.append(h1, menuList)
+  main.classList.add('menu-section')
   main.append(container)
   content.append(main)
 }
