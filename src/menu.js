@@ -39,20 +39,6 @@ export default function displayMenu() {
     product.append(img,name,price)
     menuList.append(product)
   }
-  h2.innerText = 'Dessert'
-  menuList.append(h2)
-  for (let desert of dessert) {
-    const product = document.createElement('div')
-    const name = document.createElement('p')
-    const price = document.createElement('p')
-    price.innerText = '$1.00'
-    name.innerText = desert
-    product.classList.add('product')
-    name.classList.add('name-product')
-    price.classList.add('price-product')
-    product.append(name,price)
-    menuList.append(product)
-  }
   h1.innerText = 'Menu'
   menuList.classList.add('menu-list')
   container.classList.add('container', 'menu')
