@@ -2,11 +2,12 @@
   "name": "restaurant-page",
   "version": "1.0.0",
   "description": "",
-  "private":true,
+  "private": true,
   "scripts": {
     "build": "webpack",
     "watch": "webpack --watch",
-    "start": "webpack serve --open"
+    "start": "webpack serve --open",
+    "pages": "git subtree push --prefix dist origin gh-pages"
   },
   "keywords": [],
   "author": "",
