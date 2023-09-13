@@ -88,6 +88,7 @@ main .menu {
   height: calc(100svh - 54.4px);
   border-radius: 1rem;
   overflow: auto;
+  scrollbar-width: none;
 }
 
 main .menu h1 {
@@ -127,4 +128,41 @@ main .menu .menu-list h2 {
 .price-product {
   color: white;
   margin-left: auto;
+}
+
+/* === Contact === */
+
+main.contact-section {
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+main .contact {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  height: calc(100svh - 54.4px);
+}
+
+main .contact img {
+  width: 80%;
+}
+
+main .contact address {
+  color: white;
+}
+
+main .contact form {
+  display: grid;
+  width: 70%;
+  color: white;
+}
+
+main .contact form button {
+  width:min-content;
+  padding: 0.5rem  1rem;
+  margin: 1rem 0;
+}
+
+main .contact form h1 {
+  margin: 1rem 0;
 }
