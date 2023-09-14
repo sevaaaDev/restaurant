@@ -1,3 +1,12 @@
+@font-face {
+  font-display: swap;
+  font-family: 'Caveat';
+  font-style: normal;
+  font-weight: 400;
+  src: url('fonts/caveat-v17-latin-regular.woff2') format('woff2');
+}
+
+
 * {
   padding: 0;
   margin: 0;
@@ -8,11 +17,28 @@
   background-image: url(img/hero-home.jpg);
   background-size: cover;
   background-position: 0 -10rem;
+  min-height: 100svh;
 }
+
+.underline {
+  border-bottom: 1px solid white;
+}
+
+.container {
+  margin: 0 5rem;
+}
+
+body {
+  font-family: 'Caveat';
+  overflow: hidden;
+}
+
+/* === Nav Header === */
 
 header {
   background-color: rgba(0, 0, 0, 0.9);
   text-align: center;
+  border-bottom: 1px solid grey;
 }
 
 header nav ul {
@@ -38,24 +64,13 @@ header nav ul li:hover {
   text-decoration: underline;
 }
 
-.container {
-  margin: 0 5rem;
-}
-
-main {
-  height: calc(100svh - 55.2px);
-}
-
-.underline {
-  border-bottom: 1px solid white;
-}
 
 /* === Home === */
 
 main .home {
   display: flex;
   flex-direction: column;
-  height: calc(95svh - 54.4px);
+  height: 100svh;
   justify-content: center;
 }
 
@@ -89,7 +104,7 @@ main .menu {
     hsl(22, 60%, 20%) 5px,
     hsl(22, 60%, 20%) 25px
   );
-  height: calc(95svh - 54.4px);
+  height: 100svh;
   border-radius: 1rem;
   overflow: auto;
   scrollbar-width: none;
@@ -122,6 +137,7 @@ main .menu .menu-list {
 
 .name-product {
   color: white;
+  font-size: 1.5rem;
 }
 
 .price-product {
@@ -139,7 +155,7 @@ main .contact {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   align-items: center;
-  height: calc(95svh - 54.4px);
+  height: 100dvh;
 }
 
 main .contact img {
@@ -147,6 +163,7 @@ main .contact img {
 }
 
 main .contact address {
+  font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   color: white;
 }
 
@@ -154,12 +171,21 @@ main .contact form {
   display: grid;
   width: 70%;
   color: white;
+  font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+main .contact form label:nth-child(n+2) {
+  margin-top: 1rem;
 }
 
 main .contact form button {
   width:min-content;
   padding: 0.5rem  1rem;
   margin: 1rem 0;
+  border: none;
+  border-radius: .5rem;
+  background-color: hsl(22, 60%, 20%);
+  color: white;
 }
 
 main .contact form h1 {
