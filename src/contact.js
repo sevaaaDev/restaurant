@@ -24,7 +24,7 @@ export default function displayContact() {
   const telephone = document.createElement('p')
   const img = document.createElement('img')
   const button = document.createElement('button')
-  alamat.innerText = '🍽 Mars street 23, Los Nevada, Frace'
+  alamat.innerText = '🍽 Mars street 23, Los Nevada, France'
   telephone.innerText = '📞123-123-321'
   img.setAttribute('src', 'img/restaurant-location.png')
   address.append(img,alamat,telephone)
